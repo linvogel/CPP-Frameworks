@@ -13,5 +13,33 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\public">
+      <UniqueIdentifier>{376a174c-a678-44ee-8961-f9d80b434506}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\private">
+      <UniqueIdentifier>{5264c1e6-416d-4a3d-9467-2327de4174f3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="logger_output.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="logger_colour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="logger.h">
+      <Filter>Header Files\public</Filter>
+    </ClInclude>
+    <ClInclude Include="logger_output.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="logger_colour.h">
+      <Filter>Header Files\public</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
