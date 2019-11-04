@@ -24,9 +24,6 @@
     <ClCompile Include="logger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="logger_output.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="logger_colour.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
