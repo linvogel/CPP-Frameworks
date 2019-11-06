@@ -42,7 +42,7 @@ void linv::colours::set_colour(ConsoleColour fg, ConsoleColour bg)
 void linv::colours::set_fg(ConsoleColour fg)
 {
 	if (!bInit) return;
-	if (colour_front == colour_back) return;
+	if (fg == colour_back) return;
 	colour_front = fg;
 	unsigned short wAttributes = ((unsigned int)colour_back << 4) | (unsigned int)colour_front;
 	SetConsoleTextAttribute(hConsole, wAttributes);
@@ -51,7 +51,7 @@ void linv::colours::set_fg(ConsoleColour fg)
 void linv::colours::set_bg(ConsoleColour bg)
 {
 	if (!bInit) return;
-	if (colour_front == colour_back) return;
+	if (colour_front == bg) return;
 	colour_back = bg;
 	unsigned short wAttributes = ((unsigned int)colour_back << 4) | (unsigned int)colour_front;
 	SetConsoleTextAttribute(hConsole, wAttributes);

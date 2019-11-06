@@ -1,5 +1,7 @@
 #pragma once
 
+#include <ostream>
+
 #define lvInitColour		linv::colours::init
 #define lvDestroyColour		linv::colours::destroy
 #define lvColourSet			linv::colours::set_colour
@@ -44,5 +46,13 @@ namespace linv {
 		void set_fg(ConsoleColour fg);
 		void set_bg(ConsoleColour bg);
 		void update();
-	}
+	};
+};
+
+template<class elem, class traits>
+inline std::basic_ostream<elem, traits>& operator<<(std::basic_ostream<elem, traits>& os, linv::colours::ConsoleColour col)
+{
+	os.flush();
+	linv::colours::set_fg(col);
+	return os;
 }

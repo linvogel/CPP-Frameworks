@@ -1,28 +1,20 @@
-#include "pch.h"
-#include "CppUnitTest.h"
 
 #include "linvogel_colour_framework.h"
 #include "linvogel_logger_framework.h"
 
+#include <iostream>
 
 lvSetupLoggerModule("UnitTestMain")
 
-using namespace Microsoft::VisualStudio::CppUnitTestFramework;
-
-namespace UnitTests
+int main(void)
 {
-
-
-	TEST_CLASS(UnitTests)
-	{
-	public:
-		
-		TEST_METHOD(TestMethod1)
-		{
-
-			lvInitColour();
-			
-
-		}
-	};
+	lvInitColour();
+	lvAddLoggerOutput(&std::cout, lvVERBOSE, lvConsoleColour::red, lvConsoleColour::dark_red, lvConsoleColour::dark_yellow, lvConsoleColour::white, lvConsoleColour::cyan, lvConsoleColour::blue);
+	
+	fatal("This is a fatal error!");
+	error("This error was recoverable.");
+	warning("This might lead to an error...");
+	info("This is an ordinary message");
+	debug("This should aid debugging");
+	verbose("This is probably too verbose for anyone except for me right now");
 }
