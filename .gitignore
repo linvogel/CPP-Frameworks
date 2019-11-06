@@ -1,6 +1,4 @@
 
 .vs/
-LoggingFramework/intermediate/
-LoggingFramework/Debug/
-LoggingFramework/Release/
+intermediate/
 out/

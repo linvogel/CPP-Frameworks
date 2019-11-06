@@ -15,12 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="linvogel_logger_framework.h">
+    <ClInclude Include="linvogel_colour_framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="linvogel_logger_framework.cpp">
+    <ClCompile Include="linvogel_colour_framework.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

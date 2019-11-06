@@ -34,16 +34,10 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="linvogel_logger_framework.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="linvogel_logger_framework.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{ba6b9bc9-0248-4678-aa87-a49929568747}</ProjectGuid>
-    <RootNamespace>LoggingFramework</RootNamespace>
+    <ProjectGuid>{900A5C90-D26B-43A5-82F7-1F2620D84925}</ProjectGuid>
+    <RootNamespace>LibraryConsoleColourFramework</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -140,42 +134,34 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug DLL|Win32'">
     <OutDir>$(SolutionDir)out\$(ProjectName)\debug\dll</OutDir>
     <IntDir>$(SolutionDir)intermediate\$(ProjectName)-$(Platform)-$(Configuration)\</IntDir>
-    <LibraryPath>$(SolutionDir)out\LibraryConsoleColourFramework\debug\dll;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug LIB|Win32'">
     <OutDir>$(SolutionDir)out\$(ProjectName)\debug\lib</OutDir>
     <IntDir>$(SolutionDir)intermediate\$(ProjectName)-$(Platform)-$(Configuration)\</IntDir>
-    <LibraryPath>$(SolutionDir)out\LibraryConsoleColourFramework\debug\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release DLL|Win32'">
     <OutDir>$(SolutionDir)out\$(ProjectName)\dll</OutDir>
     <IntDir>$(SolutionDir)intermediate\$(ProjectName)-$(Platform)-$(Configuration)\</IntDir>
-    <LibraryPath>$(SolutionDir)out\LibraryConsoleColourFramework\dll;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release LIB|Win32'">
     <OutDir>$(SolutionDir)out\$(ProjectName)\lib</OutDir>
     <IntDir>$(SolutionDir)intermediate\$(ProjectName)-$(Platform)-$(Configuration)\</IntDir>
-    <LibraryPath>$(SolutionDir)out\LibraryConsoleColourFramework\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug DLL|x64'">
     <OutDir>$(SolutionDir)out\$(ProjectName)\debug\dll_x64</OutDir>
     <IntDir>$(SolutionDir)intermediate\$(ProjectName)-$(Platform)-$(Configuration)\</IntDir>
-    <LibraryPath>$(SolutionDir)out\LibraryConsoleColourFramework\debug\dll_x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug LIB|x64'">
     <OutDir>$(SolutionDir)out\$(ProjectName)\debug\lib_x64</OutDir>
     <IntDir>$(SolutionDir)intermediate\$(ProjectName)-$(Platform)-$(Configuration)\</IntDir>
-    <LibraryPath>$(SolutionDir)out\LibraryConsoleColourFramework\debug\lib_x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release DLL|x64'">
     <OutDir>$(SolutionDir)out\$(ProjectName)\dll_x64</OutDir>
     <IntDir>$(SolutionDir)intermediate\$(ProjectName)-$(Platform)-$(Configuration)\</IntDir>
-    <LibraryPath>$(SolutionDir)out\LibraryConsoleColourFramework\dll_x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release LIB|x64'">
     <OutDir>$(SolutionDir)out\$(ProjectName)\lib_x64</OutDir>
     <IntDir>$(SolutionDir)intermediate\$(ProjectName)-$(Platform)-$(Configuration)\</IntDir>
-    <LibraryPath>$(SolutionDir)out\LibraryConsoleColourFramework\lib_x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug DLL|Win32'">
     <ClCompile>
@@ -183,7 +169,6 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)out\LibraryConsoleColourFramework\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -199,7 +184,6 @@ xcopy /y "$(ProjectDir)*.h" "$(SolutionDir)out\$(ProjectName)\include"</Command>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)out\LibraryConsoleColourFramework\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -215,7 +199,6 @@ xcopy /y "$(ProjectDir)*.h" "$(SolutionDir)out\$(ProjectName)\include"</Command>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)out\LibraryConsoleColourFramework\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -231,7 +214,6 @@ xcopy /y "$(ProjectDir)*.h" "$(SolutionDir)out\$(ProjectName)\include"</Command>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)out\LibraryConsoleColourFramework\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -249,7 +231,6 @@ xcopy /y "$(ProjectDir)*.h" "$(SolutionDir)out\$(ProjectName)\include"</Command>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)out\LibraryConsoleColourFramework\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -269,7 +250,6 @@ xcopy /y "$(ProjectDir)*.h" "$(SolutionDir)out\$(ProjectName)\include"</Command>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)out\LibraryConsoleColourFramework\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -289,7 +269,6 @@ xcopy /y "$(ProjectDir)*.h" "$(SolutionDir)out\$(ProjectName)\include"</Command>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)out\LibraryConsoleColourFramework\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -309,7 +288,6 @@ xcopy /y "$(ProjectDir)*.h" "$(SolutionDir)out\$(ProjectName)\include"</Command>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)out\LibraryConsoleColourFramework\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -321,6 +299,12 @@ xcopy /y "$(ProjectDir)*.h" "$(SolutionDir)out\$(ProjectName)\include"</Command>
 xcopy /y "$(ProjectDir)*.h" "$(SolutionDir)out\$(ProjectName)\include"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="linvogel_colour_framework.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="linvogel_colour_framework.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
