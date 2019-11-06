@@ -12,8 +12,14 @@ void linv::colours::init()
 	if (bInit) return;
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	update();
-	colour_front_orig = colour_front; colour_back_orig = colour_back;
+	colour_front_orig = colour_front;
+	colour_back_orig = colour_back;
 	bInit = true;
+}
+
+bool linv::colours::is_init()
+{
+	return bInit;
 }
 
 void linv::colours::destroy()

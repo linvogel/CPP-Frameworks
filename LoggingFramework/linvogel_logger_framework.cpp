@@ -8,11 +8,15 @@ struct OTuple {
 	linv::colours::ConsoleColour colours[6];
 };
 
+namespace linv { namespace log {
+	void log(LogLevel level, const char* module, const char* msg);
+} }
+
 struct OTuple* outs[255];
 uint8_t count = 0;
 std::mutex mtx;
 
-void log(linv::log::LogLevel level, const char* module, const char* msg)
+void linv::log::log(linv::log::LogLevel level, const char* module, const char* msg)
 {
 	for (uint8_t i = 0; i < 255; i++) {
 		if (outs[i] != 0) {
@@ -27,42 +31,42 @@ void log(linv::log::LogLevel level, const char* module, const char* msg)
 void linv::log::fatal(const char* module, const char* msg)
 {
 	mtx.lock();
-	::log(FATAL, module, msg);
+	log(FATAL, module, msg);
 	mtx.unlock();
 }
 
 void linv::log::error(const char* module, const char* msg)
 {
 	mtx.lock();
-	::log(ERROR, module, msg);
+	log(ERROR, module, msg);
 	mtx.unlock();
 }
 
 void linv::log::warning(const char* module, const char* msg)
 {
 	mtx.lock();
-	::log(WARNING, module, msg);
+	log(WARNING, module, msg);
 	mtx.unlock();
 }
 
 void linv::log::info(const char* module, const char* msg)
 {
 	mtx.lock();
-	::log(INFO, module, msg);
+	log(INFO, module, msg);
 	mtx.unlock();
 }
 
 void linv::log::debug(const char* module, const char* msg)
 {
 	mtx.lock();
-	::log(DEBUG, module, msg);
+	log(DEBUG, module, msg);
 	mtx.unlock();
 }
 
 void linv::log::verbose(const char* module, const char* msg)
 {
 	mtx.lock();
-	::log(VERBOSE, module, msg);
+	log(VERBOSE, module, msg);
 	mtx.unlock();
 }
 

@@ -216,6 +216,7 @@ xcopy /y "$(ProjectDir)*.h" "$(SolutionDir)out\$(ProjectName)\include"</Command>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)out\LibraryConsoleColourFramework\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

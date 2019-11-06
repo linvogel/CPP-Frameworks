@@ -2,8 +2,10 @@
 
 #define lvInitColour		linv::colours::init
 #define lvDestroyColour		linv::colours::destroy
-#define lvColourSet			linv::colours::set_color;
-#define lvColourSetBG		linv::colours::set_bg;
+#define lvColourSet			linv::colours::set_colour
+#define lvColourSetBG		linv::colours::set_bg
+#define lvColourSetFG		linv::colours::set_fg
+#define lvColourUpdate		linv::colours::update
 #define lvConsoleColour		linv::colours::ConsoleColour
 
 
@@ -36,6 +38,7 @@ namespace linv {
 		};
 
 		void init();
+		bool is_init();
 		void destroy();
 		void set_colour(ConsoleColour fg, ConsoleColour bg);
 		void set_fg(ConsoleColour fg);
