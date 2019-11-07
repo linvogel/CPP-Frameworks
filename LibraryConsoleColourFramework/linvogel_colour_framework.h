@@ -14,7 +14,7 @@
 namespace linv {
 	namespace colours {
 
-		enum ConsoleColour {
+		enum class ConsoleColour {
 			black = 0,
 			dark_blue = 1,
 			dark_green = 2,

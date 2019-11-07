@@ -84,7 +84,7 @@ void linv::log::removeOutput(uint8_t id)
 {
 }
 
-uint8_t linv::log::addLoggerOutput(std::ostream* stream, LogLevel level, linv::colours::ConsoleColour cFatal = linv::colours::dark_red, linv::colours::ConsoleColour cError = linv::colours::red , linv::colours::ConsoleColour cWarn = linv::colours::dark_yellow, linv::colours::ConsoleColour cInfo = linv::colours::white, linv::colours::ConsoleColour cDebug = linv::colours::white, linv::colours::ConsoleColour cVerbose = linv::colours::cyan)
+uint8_t linv::log::addLoggerOutput(std::ostream* stream, LogLevel level, linv::colours::ConsoleColour cFatal = linv::colours::ConsoleColour::dark_red, linv::colours::ConsoleColour cError = linv::colours::ConsoleColour::red , linv::colours::ConsoleColour cWarn = linv::colours::ConsoleColour::dark_yellow, linv::colours::ConsoleColour cInfo = linv::colours::ConsoleColour::white, linv::colours::ConsoleColour cDebug = linv::colours::ConsoleColour::white, linv::colours::ConsoleColour cVerbose = linv::colours::ConsoleColour::cyan)
 {
 	mtx.lock();
 	uint8_t i = 0;

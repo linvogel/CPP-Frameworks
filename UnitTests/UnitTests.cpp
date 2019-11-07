@@ -17,4 +17,8 @@ int main(void)
 	info("This is an ordinary message");
 	debug("This should aid debugging");
 	verbose("This is probably too verbose for anyone except for me right now");
+
+
+
+	lvDestroyColour();
 }

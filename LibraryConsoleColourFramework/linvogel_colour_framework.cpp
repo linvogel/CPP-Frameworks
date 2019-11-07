@@ -3,9 +3,15 @@
 #include <Windows.h>
 #include <iosfwd>
 
-HANDLE hConsole = 0;
-linv::colours::ConsoleColour colour_back, colour_front, colour_back_orig, colour_front_orig;
-bool bInit = false;
+#include <iostream>
+
+namespace linv {
+	namespace colours {
+		HANDLE hConsole = 0;
+		linv::colours::ConsoleColour colour_back, colour_front, colour_back_orig, colour_front_orig;
+		bool bInit = false;
+	}
+}
 
 void linv::colours::init()
 {
@@ -14,6 +20,11 @@ void linv::colours::init()
 	update();
 	colour_front_orig = colour_front;
 	colour_back_orig = colour_back;
+	if (colour_front_orig == colour_back_orig) {
+		colour_front_orig = ConsoleColour::dark_white;
+		colour_back_orig = ConsoleColour::black;
+	}
+	std::cout << (unsigned int)colour_back_orig << ", " << (unsigned int)colour_front_orig << std::endl;
 	bInit = true;
 }
 
